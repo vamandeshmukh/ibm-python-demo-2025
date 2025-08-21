@@ -22,8 +22,14 @@ class Employee:
 
 # instance methods, class methods, static methods 
 
+    @classmethod
+    def get_data():
+        pass
 
-    
+    # @instancemethod
+    def get_more_data():
+        pass
+
 emp = Employee(101, "Sonu", 20000)
 # emp = Employee() # no constr 
 print(emp)
@@ -32,5 +38,10 @@ print(emp)
 
 
 
+employee = {}
 
+
+
+def employee_Service():
+    pass  
 
