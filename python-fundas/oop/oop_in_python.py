@@ -14,8 +14,8 @@ class Employee:
         self.name = name
         self.salary = salary
 
-    def __str__(self):
-        return self.name
+    # def __str__(self):
+    #     return self.name
     
     def get_salary(self):
         return self.salary
