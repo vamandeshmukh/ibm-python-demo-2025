@@ -1,8 +1,8 @@
-# # # # functions and methods 
-# # # # function - outside 
-# # # # method - inside class 
+# # # # functions and methods
+# # # # function - outside
+# # # # method - inside class
 
-# # # class Person: 
+# # # class Person:
 # # #     def _init_(self):
 # # #         pass
 
@@ -10,9 +10,9 @@
 # # #         print('speaking...')
 
 # # # class Employee (Person):
-    
+
 # # #     # id: int
-# # #     # name: str 
+# # #     # name: str
 # # #     # salary: int
 
 # # #     # constructor method __init__
@@ -23,11 +23,11 @@
 
 # # #     # def __str__(self):
 # # #     #     return self.name
-    
+
 # # #     def get_salary(self):
 # # #         return self.salary
 
-# # # # instance methods, class methods, static methods 
+# # # # instance methods, class methods, static methods
 
 # # #     @classmethod
 # # #     def get_data(cls):
@@ -42,7 +42,7 @@
 # # #         pass
 
 # # # emp = Employee(101, "Sonu", 20000)
-# # # # emp = Employee() # no constr 
+# # # # emp = Employee() # no constr
 # # # print(emp)
 # # # emp2 = Employee(102, "Monu", 3000)
 # # # Employee.get_data()
@@ -52,19 +52,18 @@
 # # # # employee = {}
 
 # # # # def employee_Service():
-# # # #     pass  
-
+# # # #     pass
 
 
 # # class Person:
 
 # #     # def __new__(cls):
-# #     #     pass 
+# #     #     pass
 
 # #     def __init__(self):
 # #         print("person constructor called")
 
-# # class Employee (Person): 
+# # class Employee (Person):
 
 # #     def __init__(self):
 # #         print("employee constructor called")
@@ -72,15 +71,15 @@
 # # # per = Person()
 # # emp = Employee()
 
-# # # methods with __ and _ 
-# # # private protected public in Python 
-# # # public = method /variable without any underescore 
-# # # protected  = method /variable with single underescore 
-# # # private  = method /variable with double underescore 
+# # # methods with __ and _
+# # # private protected public in Python
+# # # public = method /variable without any underescore
+# # # protected  = method /variable with single underescore
+# # # private  = method /variable with double underescore
 # # @property
 # # @dataclass
 
-# class Person: 
+# class Person:
 
 #     def __init__(self):
 #         print("Person constructor")
@@ -95,7 +94,7 @@
 #         print("person protected method")
 
 # class Employee (Person):
-    
+
 #     def __init__(self):
 #         super().__init__()
 #         print("Employee constructor")
@@ -112,24 +111,13 @@
 
 # # per = Person()
 # # per.speak()
-# # # per.__person_private() # error 
+# # # per.__person_private() # error
 # # per._person_protected() # works but don't call
 # emp = Employee()
 # # emp.speak()
-# # # emp.__employee_private() # error 
-# # # emp.__person_private() # error 
+# # # emp.__employee_private() # error
+# # # emp.__person_private() # error
 # # emp._employee_protected  # works but don't call
 # # emp.method_property()
 # emp.method_property
 
-from  dataclasses import dataclass
-
-@dataclass
-class Employee:
-    
-    id: int
-    name: str 
-    salary: int
-
-emp = Employee(101, "Sonu", 10.50)
-print(emp)
