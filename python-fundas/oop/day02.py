@@ -31,21 +31,29 @@ class Employee:
         self.salary = salary
 
     def __eq__(self, other):
+        isinstance(other, Employee)
         return (
             self.id == other.id
             and self.name == other.name
             and self.salary == other.salary
         )
 
+    def __hash__(self):
+        return hash((self.id, self.name, self.salary))
+
+    def __str__(self):
+        return f"Employee = [id: {self.id}, name: {self.name}, salary: {self.salary}]"
+
     def print_data(self):
         print(f"Employee {self.id}, {self.name}, {self.salary} ")
 
 
 emp1 = Employee(101, "Sonu", 10.50)
-emp2 = Employee(101, "Sonu", 10.50)
+emp2 = Employee(102, "Sonu", 10.50)
 print(hash(emp1))
 print(hash(emp2))
 print(emp1 == emp2)
+print(emp1)
 
 # @dataclass
 # class Employee:
@@ -137,10 +145,8 @@ print(emp1 == emp2)
 #     def static_method():
 #         print(f"static_method {Employee.class_field}")
 
-
 # def some_function():
 #     print(f"some_function {Employee.class_field}")
-
 
 # emp = Employee()
 # emp.instance_method()
