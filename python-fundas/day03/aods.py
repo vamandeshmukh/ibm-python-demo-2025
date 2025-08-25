@@ -6,7 +6,6 @@ import array
 import queue
 from enum import Enum
 from dataclasses import dataclass
-import weakref
 
 Employee = namedtuple("Employee", ["id", "name", "salary"])
 e1 = Employee(101, "Sonu", 50000)
