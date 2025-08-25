@@ -1,0 +1,45 @@
+# Generators in Python and Exception handling
+
+
+def gen(n):
+    i = 1
+    while i <= n:
+        yield i  # next
+        i += 1
+
+
+val = gen(5)
+
+while True:
+    try:
+        print(next(val))
+    except StopIteration:
+        print("done")
+        break
+    except Exception:
+        print("done")
+        break
+    finally:
+        print("closing...")
+
+
+# # Generators in Python
+
+
+# def gen(n):
+#     i = 1
+#     while i <= n:
+#         yield i  # next
+#         i += 1
+
+
+# val = gen(5)
+# print(next(val))
+# print(next(val))
+# print(next(val))
+# print(next(val))
+# print(next(val))
+# print(next(val))
+
+# # for num in gen(5):
+# #     print(num)

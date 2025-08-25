@@ -12,3 +12,20 @@
 # print(emp)
 
 
+import tkinter as tk
+
+
+def say_hello():
+    label.config(text="Hello, Sonu!")
+
+
+root = tk.Tk()
+root.title("Tkinter Example")
+
+label = tk.Label(root, text="Click the button")
+label.pack(pady=10)
+
+button = tk.Button(root, text="Click Me", command=say_hello)
+button.pack(pady=5)
+
+root.mainloop()
